@@ -5,6 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Una cita para Daniela 💗</title>
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&display=swap');
 
@@ -13,7 +14,11 @@
   --claro:#ffe2ee;
   --oscuro:#35152d;
 }
-* { box-sizing:border-box; }
+
+* {
+  box-sizing:border-box;
+}
+
 body {
   margin:0;
   min-height:100vh;
@@ -22,6 +27,7 @@ body {
   background:#39152d;
   overflow-x:hidden;
 }
+
 .fotos {
   position:fixed;
   inset:0;
@@ -30,6 +36,7 @@ body {
     linear-gradient(135deg,#5a204caa,#a02e64bb),
     url('foto1.jpg') center/cover;
 }
+
 .fotos:after {
   content:"";
   position:absolute;
@@ -38,6 +45,7 @@ body {
     radial-gradient(circle at 20% 20%,#ff9ac755,transparent 50%),
     linear-gradient(#2b102877,#2b1028cc);
 }
+
 .corazon {
   position:fixed;
   bottom:-40px;
@@ -45,9 +53,14 @@ body {
   z-index:-1;
   animation:flotar linear forwards;
 }
+
 @keyframes flotar {
-  to {transform:translateY(-115vh) rotate(30deg);opacity:0}
+  to {
+    transform:translateY(-115vh) rotate(30deg);
+    opacity:0;
+  }
 }
+
 main {
   width:min(94%,480px);
   margin:45px auto;
@@ -59,11 +72,13 @@ main {
   backdrop-filter:blur(15px);
   text-align:center;
 }
+
 .etiqueta {
   letter-spacing:3px;
   font-size:11px;
   color:#ffd2e5;
 }
+
 h1 {
   font-family:'Great Vibes',cursive;
   font-size:clamp(48px,10vw,70px);
@@ -71,8 +86,16 @@ h1 {
   color:#ffd0e3;
   margin:20px 0 8px;
 }
-h2 {font-size:23px}
-p {line-height:1.7;color:#ffe3ee}
+
+h2 {
+  font-size:23px;
+}
+
+p {
+  line-height:1.7;
+  color:#ffe3ee;
+}
+
 .avatar {
   width:115px;
   height:115px;
@@ -86,14 +109,11 @@ p {line-height:1.7;color:#ffe3ee}
   display:grid;
   place-items:center;
 }
-.avatar span {font-size:46px}
-.avatar:has(img) span {display:none}
-.avatar img {
-  width:100%;
-  height:100%;
-  border-radius:50%;
-  object-fit:cover;
+
+.avatar span {
+  font-size:46px;
 }
+
 .tarjeta {
   background:#ffffff14;
   border:1px solid #ffffff30;
@@ -101,23 +121,34 @@ p {line-height:1.7;color:#ffe3ee}
   padding:20px 12px;
   margin:25px 0;
 }
-.fecha {font-size:20px;font-weight:700}
+
+.fecha {
+  font-size:20px;
+  font-weight:700;
+}
+
 .reloj {
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:7px;
   margin-top:20px;
 }
+
 .numero {
   background:#ffffff20;
   padding:12px 3px;
   border-radius:12px;
 }
+
 .numero strong {
   display:block;
   font-size:25px;
 }
-.numero small {font-size:10px}
+
+.numero small {
+  font-size:10px;
+}
+
 button {
   border:0;
   cursor:pointer;
@@ -125,6 +156,7 @@ button {
   font-weight:700;
   transition:all .3s ease;
 }
+
 .si {
   padding:18px 25px;
   border-radius:40px;
@@ -135,6 +167,7 @@ button {
   width:100%;
   max-width:320px;
 }
+
 .no {
   padding:12px 18px;
   border-radius:30px;
@@ -143,6 +176,7 @@ button {
   border:1px solid #ffffff55;
   position:relative;
 }
+
 .zona-no {
   height:145px;
   position:relative;
@@ -150,20 +184,33 @@ button {
   align-items:center;
   justify-content:center;
 }
+
 .frase {
   min-height:48px;
   font-size:15px;
   color:#ffc2da;
   font-weight:600;
 }
-.oculto {display:none}
+
+.oculto {
+  display:none !important;
+}
+
 .confirmacion {
   animation:entrada .6s ease;
 }
+
 @keyframes entrada {
-  from {opacity:0;transform:scale(.85)}
-  to {opacity:1;transform:scale(1)}
+  from {
+    opacity:0;
+    transform:scale(.85);
+  }
+  to {
+    opacity:1;
+    transform:scale(1);
+  }
 }
+
 .enlace {
   display:block;
   padding:15px;
@@ -174,161 +221,312 @@ button {
   text-decoration:none;
   font-weight:700;
   cursor:pointer;
+  width:100%;
 }
+
 .secundario {
   background:transparent;
   color:#ffd1e4;
   border:1px solid #ffb5d2;
 }
-footer {font-size:12px;color:#e8b6cf;margin-top:25px}
+
+.vestimenta {
+  border:1px solid #ffb6d5;
+  background:linear-gradient(135deg,#ffffff18,#ff8fbd20);
+  box-shadow:0 0 25px #ff8fbd22;
+}
+
+.vestimenta-icono {
+  font-size:35px;
+  margin-bottom:10px;
+}
+
+.vestimenta h2 {
+  font-family:'Great Vibes',cursive;
+  font-size:46px;
+  font-weight:400;
+  color:#ffd0e3;
+  margin:15px 0;
+}
+
+.vestimenta .detalle {
+  font-style:italic;
+  color:#ffc4dc;
+  font-size:14px;
+}
+
+footer {
+  font-size:12px;
+  color:#e8b6cf;
+  margin-top:25px;
+}
 </style>
 </head>
+
 <body>
 
 <div class="fotos"></div>
+
 <main>
-  <div class="etiqueta">💌 UNA INVITACIÓN MUY ESPECIAL 💌</div>
+
+  <div class="etiqueta">
+    💌 UNA INVITACIÓN MUY ESPECIAL 💌
+  </div>
 
   <div class="avatar">
     <span>💗</span>
   </div>
 
   <h1>Daniela</h1>
-  <div class="etiqueta">ALVARADO VARGAS</div>
+
+  <div class="etiqueta">
+    ALVARADO VARGAS
+  </div>
 
   <p>
     Entre tantas personas en el mundo,
     hay una con la que me gustaría
     compartir un momento especial.
   </p>
+
   <p>
     Y sí, esa persona sos vos. 🥹💕
   </p>
 
+  <!-- FECHA Y TEMPORIZADOR -->
+
   <div class="tarjeta">
-    <div>🌹 TENEMOS UNA CITA PENDIENTE 🌹</div>
-    <p class="fecha">Viernes 20 de noviembre de 2026</p>
-    <p>🕟 4:30 p. m. · Costa Rica</p>
-    <div class="etiqueta">FALTA EXACTAMENTE</div>
+
+    <div>
+      🌹 TENEMOS UNA CITA PENDIENTE 🌹
+    </div>
+
+    <p class="fecha">
+      Viernes 20 de noviembre de 2026
+    </p>
+
+    <p>
+      🕟 4:30 p. m. · Costa Rica
+    </p>
+
+    <div class="etiqueta">
+      FALTA EXACTAMENTE
+    </div>
 
     <div class="reloj">
-      <div class="numero"><strong id="dias">00</strong><small>DÍAS</small></div>
-      <div class="numero"><strong id="horas">00</strong><small>HORAS</small></div>
-      <div class="numero"><strong id="minutos">00</strong><small>MIN</small></div>
-      <div class="numero"><strong id="segundos">00</strong><small>SEG</small></div>
+
+      <div class="numero">
+        <strong id="dias">00</strong>
+        <small>DÍAS</small>
+      </div>
+
+      <div class="numero">
+        <strong id="horas">00</strong>
+        <small>HORAS</small>
+      </div>
+
+      <div class="numero">
+        <strong id="minutos">00</strong>
+        <small>MIN</small>
+      </div>
+
+      <div class="numero">
+        <strong id="segundos">00</strong>
+        <small>SEG</small>
+      </div>
+
     </div>
-    <p id="fin" class="oculto">¡Llegó el momento de nuestra cita! ❤️</p>
+
+    <p id="fin" class="oculto">
+      ¡Llegó el momento de nuestra cita! ❤️
+    </p>
+
   </div>
 
-<div class="tarjeta" style="
-  border: 1px solid #ffb6d5;
-  background: linear-gradient(135deg, #ffffff18, #ff8fbd20);
-  box-shadow: 0 0 25px #ff8fbd22;
-">
-  <div style="font-size:35px; margin-bottom:10px;">🥂🌹</div>
+  <!-- CÓDIGO DE VESTIMENTA -->
 
-  <div class="etiqueta">CÓDIGO DE VESTIMENTA</div>
+  <div class="tarjeta vestimenta">
 
-  <h2 style="
-    font-family:'Great Vibes',cursive;
-    font-size:46px;
-    color:#ffd0e3;
-    margin:15px 0;
-  ">
-    Formal
-  </h2>
+    <div class="vestimenta-icono">
+      🥂🌹
+    </div>
 
-  <p style="margin-bottom:5px;">
-    Una ocasión especial merece que nos vistamos
-    para la ocasión. ✨
-  </p>
+    <div class="etiqueta">
+      CÓDIGO DE VESTIMENTA
+    </div>
 
-  <p style="
-    font-style:italic;
-    color:#ffc4dc;
-    font-size:14px;
-  ">
-    Aunque estoy seguro de que vas a verte preciosa. ❤️
-  </p>
-</div>
+    <h2>
+      Formal
+    </h2>
+
+    <p>
+      Una ocasión especial merece que nos vistamos
+      para la ocasión. ✨
+    </p>
+
+    <p class="detalle">
+      Aunque estoy seguro de que vas a verte preciosa. ❤️
+    </p>
+
+  </div>
+
+  <!-- INVITACIÓN INTERACTIVA -->
 
   <section id="pregunta">
-    <h2>Daniela, ¿aceptás tener una cita conmigo? 💕</h2>
-    <p>Prometo que va a ser un momento bonito.</p>
+
+    <h2>
+      Daniela, ¿aceptás tener una cita conmigo? 💕
+    </h2>
+
+    <p>
+      Prometo que va a ser un momento bonito.
+    </p>
 
     <button id="si" class="si" onclick="aceptar()">
       ¡Sí, acepto! ❤️
     </button>
 
     <div class="zona-no">
+
       <button id="no" class="no" onclick="rechazar()">
         No 🙈
       </button>
+
     </div>
 
     <div id="frase" class="frase"></div>
+
   </section>
+
+  <!-- CONFIRMACIÓN -->
 
   <section id="resultado" class="oculto confirmacion">
+
     <h1 id="tituloResultado"></h1>
+
     <h2 id="subtitulo"></h2>
+
     <p id="mensajeResultado"></p>
 
-    <a id="whatsapp" class="enlace" target="_blank"
-       rel="noopener noreferrer">
-       💌 Enviar mi respuesta por WhatsApp
+    <a
+      id="whatsapp"
+      class="enlace"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      💌 Enviar mi respuesta por WhatsApp
     </a>
 
-    <button class="enlace secundario" onclick="reiniciar()">
+    <button
+      class="enlace secundario"
+      onclick="reiniciar()"
+    >
       Volver a la invitación
     </button>
+
   </section>
 
-  <footer>Hecho con mucho cariño y un poquito de vergüenza 💗</footer>
+  <footer>
+    Hecho con mucho cariño y un poquito de vergüenza 💗
+  </footer>
+
 </main>
 
 <script>
-// CONFIGURACIÓN
-// Colocá tu número con código de país, sin + ni espacios.
-// Ejemplo ficticio: 50688888888
+
+// ===================================
+// CONFIGURACIÓN DE WHATSAPP
+// ===================================
+
+// Colocá tu número con el código 506.
+// Ejemplo ficticio: "50688888888"
+
 const MI_WHATSAPP = "50685495757";
 
-// FECHA: 20 de noviembre de 2026, 16:30 Costa Rica
-const destino = new Date("2026-11-20T16:30:00-06:00");
+
+// ===================================
+// TEMPORIZADOR
+// ===================================
+
+const destino = new Date(
+  "2026-11-20T16:30:00-06:00"
+);
 
 function actualizarReloj() {
-  let t = Math.max(0, destino.getTime()-Date.now());
-  const d = Math.floor(t/86400000);
-  const h = Math.floor(t/3600000)%24;
-  const m = Math.floor(t/60000)%60;
-  const s = Math.floor(t/1000)%60;
 
-  document.getElementById("dias").textContent=String(d).padStart(2,"0");
-  document.getElementById("horas").textContent=String(h).padStart(2,"0");
-  document.getElementById("minutos").textContent=String(m).padStart(2,"0");
-  document.getElementById("segundos").textContent=String(s).padStart(2,"0");
+  let t = Math.max(
+    0,
+    destino.getTime() - Date.now()
+  );
 
-  if(t===0) document.getElementById("fin").classList.remove("oculto");
+  const d = Math.floor(t / 86400000);
+  const h = Math.floor(t / 3600000) % 24;
+  const m = Math.floor(t / 60000) % 60;
+  const s = Math.floor(t / 1000) % 60;
+
+  document.getElementById("dias").textContent =
+    String(d).padStart(2,"0");
+
+  document.getElementById("horas").textContent =
+    String(h).padStart(2,"0");
+
+  document.getElementById("minutos").textContent =
+    String(m).padStart(2,"0");
+
+  document.getElementById("segundos").textContent =
+    String(s).padStart(2,"0");
+
+  if (t === 0) {
+    document.getElementById("fin")
+      .classList.remove("oculto");
+  }
 }
+
 actualizarReloj();
+
 setInterval(actualizarReloj,1000);
 
+
+// ===================================
 // CORAZONES FLOTANTES
+// ===================================
+
 function crearCorazon() {
-  const e=document.createElement("div");
-  e.className="corazon";
-  e.textContent=["💗","💕","💖","🌸","💘","❤️"][Math.floor(Math.random()*6)];
-  e.style.left=Math.random()*100+"vw";
-  e.style.fontSize=(15+Math.random()*22)+"px";
-  e.style.animationDuration=(5+Math.random()*5)+"s";
+
+  const e = document.createElement("div");
+
+  e.className = "corazon";
+
+  const corazones = [
+    "💗","💕","💖","🌸","💘","❤️"
+  ];
+
+  e.textContent =
+    corazones[Math.floor(Math.random()*corazones.length)];
+
+  e.style.left = Math.random()*100+"vw";
+
+  e.style.fontSize =
+    (15+Math.random()*22)+"px";
+
+  e.style.animationDuration =
+    (5+Math.random()*5)+"s";
+
   document.body.appendChild(e);
+
   setTimeout(()=>e.remove(),11000);
 }
+
 setInterval(crearCorazon,650);
 
+
+// ===================================
 // JUEGO DEL BOTÓN NO
-let intentos=0;
-const frases=[
+// ===================================
+
+let intentos = 0;
+
+const frases = [
   "¿Segura? 🥺",
   "Pensalo otra vez 💗",
   "¿Ni una oportunidad? 🌷",
@@ -344,92 +542,172 @@ const frases=[
 ];
 
 function rechazar() {
+
   intentos++;
-  const no=document.getElementById("no");
-  const si=document.getElementById("si");
-  const frase=document.getElementById("frase");
 
-  frase.textContent=frases[Math.min(intentos-1,frases.length-1)];
+  const no = document.getElementById("no");
+  const si = document.getElementById("si");
+  const frase = document.getElementById("frase");
 
-  // El NO se hace pequeño
-  const escala=Math.max(.35,1-intentos*.075);
-  no.style.transform=`scale(${escala})`;
+  frase.textContent =
+    frases[Math.min(intentos-1,frases.length-1)];
 
-  // El SÍ se hace más llamativo
-  si.style.fontSize=(17+Math.min(intentos,10))+"px";
+  // El botón NO se hace pequeño
 
-  // El NO empieza a moverse
-  if(intentos>=6 && intentos<12) {
-    no.style.position="absolute";
-    no.style.left=(15+Math.random()*65)+"%";
-    no.style.top=(10+Math.random()*55)+"%";
+  const escala = Math.max(
+    .35,
+    1-intentos*.075
+  );
+
+  no.style.transform = `scale(${escala})`;
+
+  // El botón SÍ se hace más grande
+
+  si.style.fontSize =
+    (17+Math.min(intentos,10))+"px";
+
+  // El botón NO empieza a moverse
+
+  if (intentos>=6 && intentos<12) {
+
+    no.style.position = "absolute";
+
+    no.style.left =
+      (15+Math.random()*65)+"%";
+
+    no.style.top =
+      (10+Math.random()*55)+"%";
   }
 
-  // Desaparece después de 12 intentos
-  if(intentos>=12) {
-    no.style.display="none";
-    frase.textContent="El botón NO desapareció entre corazones 💗";
-    for(let i=0;i<25;i++) setTimeout(crearCorazon,i*65);
+  // Después de 12 intentos desaparece
 
-    // Permite rechazar realmente la invitación
-    const enlace=document.createElement("button");
-    enlace.textContent="Prefiero no aceptar";
-    enlace.className="no";
-    enlace.id="rechazoReal";
-    enlace.style.marginTop="12px";
-    enlace.onclick=()=>mostrarResultado(false);
+  if (intentos>=12) {
+
+    no.style.display = "none";
+
+    frase.textContent =
+      "El botón NO desapareció entre corazones 💗";
+
+    for(let i=0;i<25;i++) {
+      setTimeout(crearCorazon,i*65);
+    }
+
+    // Opción para rechazar la invitación
+
+    const enlace = document.createElement("button");
+
+    enlace.textContent = "Prefiero no aceptar";
+
+    enlace.className = "no";
+
+    enlace.id = "rechazoReal";
+
+    enlace.style.marginTop = "12px";
+
+    enlace.onclick = () => mostrarResultado(false);
+
     frase.appendChild(document.createElement("br"));
+
     frase.appendChild(enlace);
   }
 }
+
+
+// ===================================
+// ACEPTAR LA INVITACIÓN
+// ===================================
 
 function aceptar() {
   mostrarResultado(true);
 }
 
-function mostrarResultado(acepta) {
-  document.getElementById("pregunta").classList.add("oculto");
-  document.getElementById("resultado").classList.remove("oculto");
 
-  const texto=acepta
+// ===================================
+// MOSTRAR RESULTADO
+// ===================================
+
+function mostrarResultado(acepta) {
+
+  document.getElementById("pregunta")
+    .classList.add("oculto");
+
+  document.getElementById("resultado")
+    .classList.remove("oculto");
+
+  const texto = acepta
     ? "¡Sí, acepto nuestra cita del 20 de noviembre a las 4:30 p. m.! ❤️💕"
     : "Gracias por invitarme, pero prefiero no aceptar la cita.";
 
-  document.getElementById("tituloResultado").textContent=
-    acepta ? "¡DIJO QUE SÍ! 💖" : "Gracias por responder 💗";
+  document.getElementById("tituloResultado").textContent =
+    acepta
+    ? "¡DIJO QUE SÍ! 💖"
+    : "Gracias por responder 💗";
 
-  document.getElementById("subtitulo").textContent=
-    acepta ? "¡Tenemos una cita, Daniela!" : "Tu respuesta está bien.";
+  document.getElementById("subtitulo").textContent =
+    acepta
+    ? "¡Tenemos una cita, Daniela!"
+    : "Tu respuesta está bien.";
 
-  document.getElementById("mensajeResultado").textContent=
+  document.getElementById("mensajeResultado").textContent =
     acepta
     ? "Ahora solo falta que llegue nuestro momento especial. 🌹"
     : "Gracias por tomarte el tiempo de responder.";
 
-  const enlace=document.getElementById("whatsapp");
+  const enlace = document.getElementById("whatsapp");
 
-  if(MI_WHATSAPP) {
-    enlace.href="https://wa.me/"+MI_WHATSAPP+"?text="+encodeURIComponent(texto);
-    enlace.textContent="💌 Enviar mi respuesta por WhatsApp";
+  if (MI_WHATSAPP) {
+
+    enlace.href =
+      "https://wa.me/" +
+      MI_WHATSAPP +
+      "?text=" +
+      encodeURIComponent(texto);
+
+    enlace.textContent =
+      "💌 Enviar mi respuesta por WhatsApp";
+
   } else {
-    enlace.href="https://api.whatsapp.com/send?text="+encodeURIComponent(texto);
-    enlace.textContent="💌 Compartir mi respuesta por WhatsApp";
+
+    enlace.href =
+      "https://api.whatsapp.com/send?text=" +
+      encodeURIComponent(texto);
+
+    enlace.textContent =
+      "💌 Compartir mi respuesta por WhatsApp";
   }
 
-  if(acepta) {
-    for(let i=0;i<45;i++) setTimeout(crearCorazon,i*80);
+  if (acepta) {
+
+    for(let i=0;i<45;i++) {
+      setTimeout(crearCorazon,i*80);
+    }
   }
 }
+
+
+// ===================================
+// REINICIAR INVITACIÓN
+// ===================================
 
 function reiniciar() {
-  intentos=0;
-  document.getElementById("resultado").classList.add("oculto");
-  document.getElementById("pregunta").classList.remove("oculto");
-  document.getElementById("frase").textContent="";
-  document.getElementById("no").style.cssText="";
-  document.getElementById("si").style.fontSize="";
+
+  intentos = 0;
+
+  document.getElementById("resultado")
+    .classList.add("oculto");
+
+  document.getElementById("pregunta")
+    .classList.remove("oculto");
+
+  document.getElementById("frase").textContent = "";
+
+  document.getElementById("no").style.cssText = "";
+
+  document.getElementById("si").style.fontSize = "";
 }
+
 </script>
+
 </body>
 </html>
 
